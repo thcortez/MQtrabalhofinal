@@ -1,0 +1,670 @@
+---
+title: "TRABALHO, FAMÍLIA, GÊNERO, RELIGIÃO E DEMOCRACIA"
+subtitle: "Evidências de survey sobre estruturas sociais e comportamento político de homens e mulheres no Brasil"
+lang: pt
+#title-block-banner: true
+#title-block-categories: true
+#title-block-style: 'default' 
+email-obfuscation: references
+author: 
+  - name: <b>THIAGO CORTEZ COSTA</b> 
+#    orcid: https://orcid.org/0000-0002-5365-4732
+#    email: thiago.cortez@blaabr
+#    affiliations: 
+#      - name: Instituto de Ciência Política <br> Universidade de Brasília <br> Brasília, Brasil  
+#        address: Instituto de Ciência Política, Universidade de Brasília
+#        city: Brasília
+#        country: Brasil
+#date: '`r format(Sys.Date())`' #estabelece que dia deve constar no documento, ou o formato da data. No caso, o código indica que a data deverá ser aquela do dia em que o documento for renderizado (exportado).
+format: revealjs
+logo: logo2.png #background-image: background-image3.png #background-repeat: no-repeat #background-size: cover #background-position: center
+#email-obfuscation: javascript #Specify a method for obfuscating mailto: links in HTML documents. javascript: Obfuscate links using JavaScript. references: Obfuscate links by printing their letters as decimal or hexadecimal character references. none (default): Do not obfuscate links.
+html-q-tags: true #Use <q> tags for quotes in HTML. 
+#theme: default #indica o formato de output e o método (no caso, apresentação pelo método revealjs)
+#toc: true #cria tabela de conteúdo (menu/índice)
+#toc-title: "Na apresentação de hoje:" #code-fold: true #Collapse code into an HTML <details> tag so the user can display it on-demand. true: collapse code. false (default): do not collapse code. show: use the <details> tag, but show the expanded code initially.
+number-sections: true #numera o cabeçalho das seções do documento
+number-depth: 1 #especifica a quantidade de subníveis a serem numerados abaixo das seções de capítulos
+number-offset: 0 #[0,0] #especifica o número inteiro a partir do qual devem ser enumeradas as seções, nesse caso: [0,-], e as subseções, nesse caso: [-,0]. Se o documento devesse começar a ser contato em 1.5, number-offset deveria ser definido em [1,4].
+incremental: false #em slides contendo listas, os itens irão aparecer de um em um. Para apresentá-los todos de uma vez, troque true por false.
+slide-level: 2 #especifica o nível a partir do qual cabeçalhos (headings) criarão slides separados. Cabeçalhos acima desse nível na hierarquia serão usados para dividir a apresentação de slides em seções. cabeçalhos abaixo desse nível criam sub-cabeçalhos dentro de um slide. Valores válidos variam de 0-6. Se o valor 0 é especificado, os slides não vão ser separados automaticamente em função dos cabeçalhos, e para a separação devem ser usadas réguas horizontais (---) <- não funcionam com parâmetro diferente de 0. Dão erro, pois entram em choque com o código Yaml!!
+slide-number: true #especifica true para mostrar o número do slide atual ou false para não mostrar. alternativamente, pode ser uma string (sequência de caracteres) que especifica o formato da numeração: h.v (numero do slide horizontal.vertical); h/v (numero do slide horizontal/vertical); c (apenas o número do slide); c/t (o número do slide/número total de slides)
+show-slide-number: all #Contexts in which the slide number appears (all, print, or speaker)
+title-slide-attributes:
+  data-background-image: background-image3.png
+  data-background-size: cover
+#  data-background-repeat: no-repeat
+#  data-background-position: center
+# data-logo: logo2.png 
+center-title-slide: true
+show-notes: true #mostrar notas do palestrante? speaker notes (true or false)
+footer: "Métodos Quantitativos em Ciência Política"
+smaller: false # para usar fontes menores no conteúdo do slide. This can also be set per-slide by including the .smaller class on the slide title.
+scrollable: true #permite que caso o conteúdo do slide ultrapasse limites, seja possível rolar a página para baixo para acessar o conteúdo
+chalkboard: true #configura o quadro negro/lousa do revealjs
+#multiplex: true #Configuration for reveal presentation multiplexing.
+transition: slide #(pode ser: none, fade, slide, convex, concave or zoom)
+progress: true #mostra o progresso da apresentação # history: true #registra cada alteração de slide na memória do browser
+navigation-mode: linear # veja outras possibilidades, grid, vertical...)
+touch: true #ativa navegação por touch em dispositivos com essa função # mouse-wheel: true #ativa navegação via roda do mouse
+hide-inactive-cursor: true #oculta cursor, quando inativo #shuffle: false #if true, Randomize the order of slides each time the presentation loads #controls: true #Show arrow controls for navigating through slides.true: Always show controls. false: Never show controls. auto (default): Show controls when vertical slides are present or when the deck is embedded in an iframe. # controls-layout: bottom-right #location for navigation controls (edges or bottom-right) # hash: true (add the current slide to the url hash) # hash-type	URL hash type (number or title) # preview-links: true #mostra preview de links em uma iframe
+# auto-play-media: true #autoplay embedded media # preload-iframes: true #Global override for preloading lazy-loaded iframes null: Iframes with data-src AND data-preload will be loaded when within the viewDistance, iframes with only data-src will be loaded when visible. true: All iframes with data-src will be loaded when within the viewDistance. false: All iframes with data-src will be loaded only when visible. # view-distance: 2 #Number of slides away from the current slide to pre-load resources for. # mobile-view-distance: 2 #Number of slides away from the current slide to pre-load resources for (on mobile devices). #slide layout: # auto-stretch: true #quando há apenas uma imagem, esticar para preencher o slide. #width: 50 #The “normal” width of the presentation, aspect ratio will be preserved when the presentation is scaled to fit different resolutions. Can be specified using percentage units. #height: 50 #The “normal” height of the presentation, aspect ratio will be preserved when the presentation is scaled to fit different resolutions. Can be specified using percentage units. #margin: 1 #Factor of the display size that should remain empty around the content # margin-left: margin-left	For HTML output, sets the margin-left property on the Body element. # margin-right: For HTML output, sets the margin-right property on the Body element.  # margin-top	For HTML output, sets the margin-top property on the Body element. # margin-bottom: For HTML output, sets the margin-bottom property on the Body element. center: false #não alinha os slides ao centro verticalmente
+code-fold: true 
+code-summary: "ver código de objeto" #Summary text to use for code blocks collapsed using code-fold
+code-overflow: scroll #Choose how to handle code overflow, when code lines are too wide for their container. One of: scroll, wrap
+code-line-numbers: true #Include line numbers in code block output (true or false). For revealjs output only, you can also specify a string to highlight specific lines (and/or animate between sets of highlighted lines). Animation steps are separated by |: 1-3|1-3,5 first shows 1-3, then 1-3,5|5|5-10,12 first shows no numbering, then 5, then lines 5-10 and 12
+code-copy: true #(true, false, hover)
+code-link: true #Enables hyper-linking of functions within code blocks to their online documentation. Code linking is currently implemented only for the knitr engine (via the downlit package). # highlight-style: Specifies the coloring style to be used in highlighted source code.Instead of a STYLE name, a JSON file with extension .theme may be supplied. This will be parsed as a KDE syntax highlighting theme and (if valid) used as the highlighting style. # syntax-definitions: KDE language syntax definition files (XML) # indented-code-classes: Specify classes to use for all indented code blocks #Eecution options should be specified within the execute key. For example: #execute:     #echo: false     #warning: false
+execute: 
+  eval: true #avalia os códigos antes de gerar output. pode delimitar as linhas a serem avaliadas com: [...]
+  echo: true # true:include source code in rendered output. false: do not include source code in output. fenced: in addition to echoing, include the cell delimiter as part of the output. [...]: A list of positive or negative line numbers to selectively include or exclude lines (explicit inclusion/excusion of lines is available only when using the knitr engine)
+  output: true #Include the results of executing the code in the output. false: Do not include results. asis: Treat output as raw markdown with no enclosing containers.
+  warning: false #true: Include warnings in rendered output.false:do not include
+  error: false #if false, do not include errors in the output. (note that this implies that errors executing code will not halt processing of the document). #  include: ?? 
+  cache: false #cache results. Note that cache invalidation is triggered by changes in chunk source code (or other cache attributes you’ve defined). false: Do not cache results. refresh: Force a refresh of the cache even if has not been otherwise invalidated. 
+  freeze: auto #auto: Re-compute previously generated computational output only in case their source file changes. true: Never recompute previously generated computational output during a global project render. false (default): Recompute previously generated computational output. #FIGURES #fig-align: Figure horizontal alignment (default, left, right, or center)
+fig-cap-location: bottom #Where to place figure captions (top, bottom, or margin) # fig-width: default width for figures generated by Matplotlib or R graphics #fig-height: Default height for figures generated by Matplotlib or R graphics
+#fig-format: Default format for figures generated by Matplotlib or R graphics (retina, png, jpeg, svg, or pdf) #fig-dpi: Default DPI for figures generated by Matplotlib or R graphics #fig-asp:The aspect ratio of the plot, i.e., the ratio of height/width. When fig-asp is specified, the height of a plot (the option fig-height) is calculated from fig-width * fig-asp.The fig-asp option is only available within the knitr engine. 
+fig-responsive: true #Whether to make images in this document responsive #TABLES #tbl-colwidths: Apply explicit table column widths for markdown grid tables and pipe tables that are more than columns characters wide (72 by default). Some formats (e.g. HTML) do an excellent job automatically sizing table columns and so don’t benefit much from column width specifications. Other formats (e.g. LaTeX) require table column sizes in order to correctly flow longer cell content (this is a major reason why tables > 72 columns wide are assigned explicit widths by Pandoc). This can be specified as: auto: Apply markdown table column widths except when there is a hyperlink in the table (which tends to throw off automatic calculation of column widths based on the markdown text width of cells). (auto is the default for HTML output formats). true: Always apply markdown table widths (true is the default for all non-HTML formats). false: Never apply markdown table widths. An array of numbers (e.g. [40, 30, 30]): Array of explicit width percentages.
+tbl-cap-location: bottom #Where to place table captions (top, bottom, or margin)
+df-print: default 
+#Method used to print tables in Knitr engine documents: default: Use the default S3 method for the data frame. kable: Markdown table using the knitr::kable() function. tibble: Plain text table using the tibble package. paged: HTML table with paging for row and column overflow. The default printing method is kable.#LINKS #link-external-icon	#Show a special icon next to links that leave the current site #link-external-newwindow	#Open external links in a new browser window or tab (rather than navigating the current tab). #link-external-filter	# A regular expression that can be used to determine whether a link is an internal link. For example, the following will treat links that start with http://www.quarto.org as internal links (and others will be considered external): ^(?:http:|https:)\/\/www\.quarto\.org\/custom #REFERENCES 
+bibliography: library.bib #indica arquivo em que se encontra a bibliografia a ser citada Document bibliography (BibTeX or CSL). May be a single file or a list of files.
+csl: associacao-brasileira-de-normas-tecnicas.csl #citation style language file to use for formating references
+citations-hover: true #ativa um popup hover para mostrar a referencia completa da citação
+citeproc: true #liga o mecanismo interno de processamento de citações. #citation-abbreviations #JSON file containing abbreviations of journals that should be used in formatted bibliographies when form="short" is specified. #FOOTNOTES
+footnotes-hover: true #ativa hover popup para notas de rodapé que mostram o conteúdo das notas
+reference-location: document #especifica localização das notas (block: ace at end of current top-level block; section: Place at end of current section; margin: Place at the margin; document: Place at end of document). Also controls the location of references, if reference-links is set. #CITATION #citation: #citation info for the document itself specified as a CSL YAML in the document front matter. P.ex. variáveis de "veja como citar" #LANGUAGE
+keywords: [comportamento político; democracia; interesse; participação; família; trabalho; casamento; dupla jornada; divisão sexual do trabalho; representação; gênero; sexo; idade; religião; renda] #list of keywords to be included in the document metadata
+pagetitle: "TRABALHO, FAMÍLIA, GÊNERO, RELIGIÃO E DEMOCRACIA" #Sets the title metadata for the document
+title-prefix: "Pesquisa" #Specify STRING as a prefix at the beginning of the title that appears in the HTML header (but not in the title as it appears at the beginning of the body)
+description-meta: "Evidências de survey sobre estruturas sociais e comportamento político de homens e mulheres no Brasil" #Specify STRING as a prefix at the beginning of the title that appears in the HTML header (but not in the title as it appears at the beginning of the body)
+author-meta: "Thiago Cortez Costa" #Sets the author metadata for the document #date-meta: #Sets the date metadata for the document #RENDERING #from: #Format to read from. Extensions can be individually enabled or disabled by appending +EXTENSION or -EXTENSION to the format name (e.g. markdown+emoji).#output-file: output-file to write to #output-ext: Extension to use for generated output file #template: #Use the specified file as a custom template for the generated document. #template-partials: Use the specified file as a custom template for the generated document. #standalone: true #Produce output with an appropriate header and footer (e.g. a standalone HTML, LaTeX, TEI, or RTF file, not a fragment) #embeded-resources: true #Produce a standalone HTML file with no external dependencies, using data: URIs to incorporate the contents of linked scripts, stylesheets, images, and videos. The resulting file should be “self-contained,” in the sense that it needs no external files and no net access to be displayed properly by a browser. This option works only with HTML output formats, including html4, html5, html+lhs, html5+lhs, s5, slidy, slideous, dzslides, and revealjs. Scripts, images, and stylesheets at absolute URLs will be downloaded; those at relative URLs will be sought relative to the working directory (if the first source file is local) or relative to the base URL (if the first source file is remote). Elements with the attribute data-external="1" will be left alone; the documents they link to will not be incorporated in the document. Limitation: resources that are loaded dynamically through JavaScript cannot be incorporated; as a result, some advanced features (e.g. zoom or speaker notes) may not work in an offline “self-contained” reveal.js slide show.# self-contained-math: Embed math libraries (e.g. MathJax) within self-contained output. Note that math libraries are not embedded by default because they are quite large and often time consuming to download. #filters: #Specify executables or Lua scripts to be used as a filter transforming the pandoc AST after the input is parsed and before the output is written. #shortcodes: #Speicfy Lua scripts that implement shortcode handlers #extract-media:   #extract images and other media contained in or linked from the source document to the path DIR, creating it if necessary, and adjust the images references in the document so they point to the extracted files. Media are downloaded, read from the file system, or extracted from a binary container (e.g. docx), as needed. The original file paths are used if they are relative paths not containing … Otherwise filenames are constructed from the SHA1 hash of the contents. #resource-path #default-image-extension	 #abbreviations #dpi #TEXT OUTPUT #strip-comments #Strip out HTML comments in the Markdown source, rather than passing them on to Markdown, Textile or HTML output as raw HTML. This does not apply to HTML comments inside raw HTML blocks when the markdown_in_html_blocks extension is not set. #ascii #Use only ASCII characters in output. Currently supported for XML and HTML formats (which use entities instead of UTF-8 when this option is selected), CommonMark, gfm, and Markdown (which use entities), roff ms (which use hexadecimal escapes), and to a limited degree LaTeX (which uses standard commands for accented characters when possible). roff man output uses ASCII by default.
+editor: 
+  markdown: 
+    wrap: 72
+---
+## Autor
+
+*THIAGO CORTEZ COSTA*
+
+Doutorando pelo Instituto de Ciência Política 
+
+Universidade de Brasília
+
+Brasília, Brasil
+
+## Apresentação
+
+> Esta apresentação cumpre os requisitos referentes ao trabalho final
+
+> As atividades correspondentes à lista 05 estão disponíveis no texto completo: <https://thcortez.github.io/listaetrabfinal/artigocompleto.html>
+
+
+## CONTEXTO
+
+-   Que fatores explicam interesse e comportamento político?
+
+## Diversidade de abordagens teóricas:
+
+    - determinismo
+      ou estruturalismo:
+            | classes sociais 
+            | feminismo
+            | estudos de raça
+            | marxismo?
+            | cultura política
+            | institucionalismo
+            | sistemas e processos?
+            | elites
+            
+
+## Diversidade de abordagens teóricas:
+
+    - individualismo:
+            | liberalismo?
+            | escolha racional
+            | utilitarismo
+            | escolha pública?
+            | neo-institucionalismo
+            | interacionismo simbólico?
+                     
+
+## DEBATE
+
+-   Limitações deterministas
+
+-   Limitações do individualismo metodológico
+
+-   Perspectivas filosófico-normativas x perspectivas empíricas
+
+-   Mix de discurso político e texto acadêmico?
+
+-   Construções teóricas de base lógica dedutiva
+
+-   Necessidade de demonstração e teste face aos dados
+
+## OBJETO ESPECÍFICO
+
+-   Estudo da questão da subrepresentação política de mulheres
+
+    -   Testar em base empírica algumas hipóteses recorrentes em textos
+        feministas
+
+    -   Estes incluem explicações de ordem cultural, institucional,
+        desenvolvimentista, estruturalista, entre outras.
+
+## Metodologia
+
+-   Análise de dados de survey:
+    -   pesquisa amostral de opinião pública nacional, feita pelo
+        Instituto DataSenado
+    -   amostra probabilística em todos os níveis
+    -   entrevistas telefônicas
+    -   cerca de 1100 participantes
+    -   universo: pessoas residentes no Brasil, maiores de 16 anos, com
+        acesso a telefone fixo.
+
+## Metodologia
+
+-   Estatística descritiva
+-   Teste de hipóteses:
+    -   teste de McNemar
+    -   regressão logística
+
+## Leitura de Pacotes
+
+```{r Chamada para carregamento de pacotes}
+
+currentpacks = lapply(c("usethis",
+          "gitcreds",
+          "tidyverse",
+          "bookdown",
+          "blogdown",
+          "quarto",
+          "mice",
+          "labelled",
+          "Hmisc",
+          "prevalence",
+          "survey",
+          "rtools42",
+          "tesseract",
+          "tinytex",
+          "xelatex",
+          "revealjs",
+          "palmerpenguins",
+          "downlit",
+          "xml2",
+          "htmlwidgets",
+          "shiny",
+          "flexdashboard",
+          "citation",
+          "dplyr",
+          "dtplyr",
+          "rmarkdown",
+          "rvest",
+          "polite", 
+          "gert",
+          "gh",
+          "credentials",
+          "yaml",
+          "haven",
+          "janitor",
+          "lubridate",
+          "readxl",
+          "stringr",
+          "magrittr",
+          "srvyr",
+          "gcookbook",
+          "report",
+          "gghighlight",
+          "moderndive",
+          "skimr",
+          "infer",
+          "parsnip",
+          "ggplot2",
+          "rstatix",
+          "ggpubr"), require, character.only = T )
+
+# definir working directory
+
+setwd("~/R Projects/listaetrabfinal")
+
+```
+
+## Importação dos dados
+
+```{r}
+polbr <- read_delim("polbr2014final.csv", delim = ";", 
+                     col_names = TRUE,
+                     na = c("","NA"," NA","NA ","NANA","NA  "," "),
+                     col_select = c("estado":"pesos"),
+                     col_types = cols(   
+                       "estado" = "f",
+                       "regiao" = "f",
+                       "interestpol" = col_factor(levels = c("nenhum",  
+                                                             "baixo",
+                                                             "medio",
+                                                             "alto"),
+                                                  ordered = TRUE,
+                                                  include_na = TRUE),
+                       "high_interest" = col_factor(levels = c("nao_alto",       
+                                                               "alto"),
+                                                    ordered = FALSE,
+                                                    include_na = TRUE),
+                       "med_interest" = col_factor( levels = c("nao_medio",
+                                                               "medio"),
+                                                         ordered = FALSE,
+                                                         include_na = TRUE),
+                       "high_med_interest" = col_factor( levels = c( "baixo_sem",
+                                                                     "alto_medio"),
+                                                         ordered = FALSE,
+                                                         include_na = TRUE),
+                       "low_interest" = col_factor(levels = c("nao_baixo",
+                                                              "baixo"),
+                                                   ordered = TRUE,
+                                                   include_na = TRUE),
+                       "low_no_interest" = col_factor(levels = c( "alto_medio",
+                                                                  "baixo_sem"),
+                                                      ordered = TRUE,
+                                                      include_na = TRUE),
+                       "sem_interest" = col_factor(levels = c("algum_interesse",
+                                                              "nenhum_interesse"),
+                                                   ordered = FALSE,
+                                                   include_na = TRUE),
+                       "votedifsex1" = col_factor(levels = c("na_misteriosos",
+                                                             "nunca_votou__indiferentes",
+                                                             "nao_faz_diferenca__mentes_abertas",
+                                                             "simhomens_engajados/as_patriarcado",
+                                                             "simmulheres_engajados/as_feministas",
+                                                             "simna_envergonhados"),
+                                                  ordered = FALSE,
+                                                  include_na = TRUE),
+                     "votedifsex2" = col_factor(levels = c("nunca_votou",
+                                                           "nao_faz_diferenca",
+                                                           "faz_diferenca"),
+                                                  ordered = FALSE,
+                                                  include_na = TRUE),
+                       "evervotefem" = col_factor(levels = c("nunca votou", 
+                                                             "sim",
+                                                             "nao")),
+                       "faltapoiofam" = col_factor(levels = c("outro",
+                                                              "falta de apoio da familia"),
+                                                   ordered = FALSE,
+                                                   include_na = TRUE),
+                       "dific_conc_h" = col_factor(levels = c("outro",
+                                                              "dificuldade de concorrer com um homem"),
+                                                   ordered = FALSE,
+                                                   include_na = TRUE),
+                       "apoio_party" = col_factor(levels = c("outro",
+                                                             "falta_apoio_party"),
+                                                  ordered = FALSE,
+                                                  include_na = TRUE),
+                       "falta_interesse" = col_factor(levels = c("outro",
+                                                                 "falta_interesse"),
+                                                      ordered = FALSE,
+                                                      include_na = TRUE),
+                       "div_sexual_trab" = col_factor(levels = c("outro",
+                                                                 "tarefas_domesticas"),
+                                                      ordered = FALSE,
+                                                      include_na = TRUE),
+                       "reasonparty" = col_factor(levels = c("na",
+                                                            "falta de apoio dos partidos politicos",
+                                                            "falta de interesse por politica",
+                                                            "dificuldade de concorrer com um homem",
+                                                            "falta de apoio da familia",
+                                                            "tempo dedicado as tarefas domesticas", 
+                                                            "outro"), 
+                                                 ordered = FALSE, 
+                                                 include_na = TRUE),
+                       "presidsymbolic" = col_factor(levels = c("nao influencia",
+                                                                "influencia"),
+                                                     ordered = FALSE,
+                                                     include_na = TRUE),
+                       "femrightsconhece" = col_factor(levels = c("nao_conhece",
+                                                                  "conhece")),
+                       "femrightsenough" = col_factor(levels = c("voce desconhece a legislacao",
+                                                                 "insuficientes",
+                                                                 "suficientes"),
+                                                      ordered = FALSE,      
+                                                      include_na = TRUE),
+                       "parityagree" = col_factor(levels = c("discorda",
+                                                             "concorda"),
+                                                  ordered = FALSE,
+                                                  include_na = TRUE), 
+                       "quotapunish" = col_factor(levels = c( "nao",
+                                                              "sim"),
+                                                  ordered = FALSE,
+                                                  include_na = TRUE), 
+                       "quotasenathird" = col_factor(levels = c("contra",
+                                                                "a favor"),
+                                                     ordered = FALSE,
+                                                     include_na = TRUE), 
+                       "haspartner"  = col_factor(levels = c("nao_tem_companh", 
+                                                             "tem_companh"),
+                                                  ordered = FALSE,
+                                                  include_na = TRUE),
+                       "housekeep" = col_factor(levels = c("outro_arranjo",
+                                                           "nao_tem_companh",
+                                                           "tem_companh_sou_responsavel",
+                                                           "tem_companh_que_eh_responsavel",
+                                                           "tem_companh_divisao_igual"),
+                                                ordered = FALSE, 
+                                                include_na = TRUE),      
+                       "haskids" = col_factor(levels = c("nao tem filhos",
+                                                         "tem filhos"),
+                                              ordered = FALSE, 
+                                              include_na = TRUE),        
+                       "haskidsin" = col_factor(levels = c("nao_tem_filhos",
+                                                           "filhos_nao_moram",
+                                                           "filhos_moram"),
+                                                ordered = FALSE,
+                                                include_na = TRUE),   
+                       "haskidsinlittle" = col_factor(levels = c("nao_tem_filhos",
+                                                                 "filhos_nao_moram",
+                                                                 "filhos_moram_crescidos",
+                                                                 "filhos_moram_pequenos"),
+                                                      ordered = FALSE, 
+                                                      include_na = TRUE),
+                       "kidstotal" = col_factor(levels = c("nao_tem_filhos",
+                                                           "filhos_nao_moram",
+                                                           "filhos_moram_crescidos",
+                                                           "filhos_moram_pequenos",
+                                                           "filhos_peq_cuida_comp",
+                                                           "filhos_peq_cuida_div",
+                                                           "filhos_peq_solo_parent",
+                                                           "filhos_peq_voce_cuida",
+                                                           "filhos_peq_outro_arranjo"),
+                                                ordered = FALSE, 
+                                                include_na = TRUE),
+                       "wannakids" = col_factor(levels = c("ja_tenho_filhos",
+                                                           "quero_ter_filhos",
+                                                           "nao_quero_ter_fihos"),
+                                                ordered = FALSE,
+                                                include_na = TRUE),        
+                       "paidjob" = col_factor(levels = c("nao",
+                                                         "sim"),
+                                              ordered = FALSE,
+                                              include_na = TRUE),        
+                       "assoc" = col_factor(levels = c("nao_sou_membro_de_assoc", 
+                                                       "sou_membro_de_assoc"),
+                                            ordered = FALSE,
+                                            include_na = TRUE),  
+                       "levelassoc" = col_factor(levels = c( "nao_sou_membro_de_assoc",
+                                                             "sou_membro_de_assocna",
+                                                             "sou_membro_de_assocbaixo",
+                                                             "sou_membro_de_assocmedio",
+                                                             "sou_membro_de_assocalto"),
+                                                 ordered = FALSE,
+                                                 include_na = TRUE),
+                       "familysupport" = col_factor(levels = c("nao_apoiaria",
+                                                               "apoiaria"),
+                                                    ordered = FALSE, 
+                                                    include_na = TRUE), 
+                       "partnersupport" = col_factor(levels = c("nao_apoiaria",
+                                                                "apoiaria",
+                                                                "nao_tem_companh"),
+                                                     ordered = FALSE, 
+                                                     include_na = TRUE), 
+                       "partnchangcitsupport" = col_factor(levels = c("nao_apoiaria",
+                                                                      "apoiaria",
+                                                                      "nao_tem_companh"),
+                                                           ordered = FALSE, 
+                                                           include_na = TRUE), 
+                       "candwchance" = col_factor(levels = c("nao",
+                                                             "sim"),
+                                                  ordered = FALSE,
+                                                  include_na = TRUE),    
+                       "thinkcand" = col_factor(levels = c("nao_nunca_pensou", 
+                                                           "sim_mas_nunca_se_candidatou",
+                                                           "sim_e_ja_se_candidatou"),
+                                                ordered = FALSE,
+                                                include_na = TRUE),     
+                       "sex" = col_factor(levels = c("masculino",
+                                                     "feminino"),
+                                          ordered = FALSE,
+                                          include_na = TRUE),            
+                       "ageinterval" = col_factor(levels = c("de 16 a 19",
+                                                             "de 20 a 29",
+                                                             "de 30 a 39",
+                                                             "de 40 a 49",
+                                                             "de 50 a 59",
+                                                             "60 anos ou mais"),
+                                                  ordered = TRUE,
+                                                  include_na = TRUE),    
+                       "educalevel" = col_factor(levels = c("ensino_fundamental",
+                                                            "ensino_medio",
+                                                            "ensino_superior"),
+                                                 ordered = TRUE,
+                                                 include_na = TRUE),
+                       "incomeinterval" = col_factor(levels = c("sem renda",
+                                                                "ate 2 sm",
+                                                              "mais de 2 a 5 sm",
+                                                              "mais de 5 a 10 sm",
+                                                                "mais de 10 sm"), 
+                                                     ordered = TRUE,
+                                                     include_na = TRUE), 
+                       "religion" = col_factor(levels = c("catolica",
+                                                          "sem religiao ou crenca",
+                                                          "outra",
+                                                          "espirita",
+                                                          "evangelica"),
+                                               ordered = FALSE,
+                                               include_na = TRUE),
+                       "pesos" = "n"))
+                       
+  
+summary(polbr)
+
+```
+
+## Alguns dados se destacam
+
+## A relação entre ter uma carreira profissional fora do âmbito doméstico e se interessar por política
+
+```{r}
+
+ggplot( 
+  data = polbr, 
+  mapping = aes(x = paidjob,
+                fill = interestpol)) +
+     geom_bar(alpha=.50) +
+  labs(x = "Trabalho remunerado",
+       y = "Nº de pessoas",
+       title = "Ter uma carreira fora de casa interfere no interesse em política? (2014)")
+
+```
+
+## A relação entre associativismo/participação e interesse em política
+
+```{r}
+
+ggplot( 
+  data = polbr, 
+  mapping = aes(x = assoc, 
+                fill = interestpol)) +
+     geom_bar(alpha=.50) +
+  labs(x = "Participativismo",
+       y = "Nº de pessoas",
+       title = "Participar de associações civis interfere no interesse em política? (2014)")
+
+```
+
+## A relação entre ter cônjuge e interesse por política
+
+```{r}
+
+ggplot( 
+  data = polbr, 
+  mapping = aes(x = interestpol,
+                fill = haspartner)) +
+    geom_bar( alpha=.50) +
+  labs(x = "Nível de interesse em política",
+       y = "Nº de pessoas",
+       title = "Situação conjugal interfere no Interesse em política? (2014)")
+
+```
+
+## Entre como são divididas as tarefas domésticas e a disponibilidade/interesse em questões políticas...
+
+```{r}
+
+ggplot( 
+  data = polbr, 
+  mapping = aes(x = interestpol,
+                fill = housekeep)) +
+     geom_bar(alpha=.50) +
+  labs(x = "Nível de interesse em política",
+       y = "Nº de pessoas",
+       title = "Concentrar o trabalho doméstico interfere no interesse em política? (2014)") + coord_flip()
+
+```
+
+## Entre ter filhos e disponibilidade/interesse para questões políticas...
+
+```{r}
+
+ggplot( 
+  data = polbr, 
+  mapping = aes(x = haskids,
+                fill = interestpol)) +
+     geom_bar(alpha=.50) +
+  labs(x = "tem filhos?",
+       y = "frequência absoluta",
+       title = "Ter filhos e se interessar por política (2014)")
+
+```
+
+## Entre as fases que os filhos estão e a disponibilidade/interesse
+
+```{r}
+
+ggplot( 
+  data = polbr, 
+  mapping = aes(x = kidstotal,
+                fill = interestpol)) +
+     geom_bar(alpha=.50) +
+  labs(x = "Responsabilidade pelo cuidado dos filhos",
+       y = "Nº de pessoas",
+       title = "Concentrar a responsabilidade de cuidar dos filhos interfere no interesse em política? (2014)") + coord_flip()
+```
+
+## Relação entre interesse em política e apoio esperado da família
+
+```{r}
+
+ggplot( 
+  data = polbr, 
+  mapping = aes(x = interestpol,
+                fill = familysupport)) +
+     geom_bar(alpha=.50) +
+  labs(x = "Teria apoio da familia para se candidatar?",
+       title = "Interesse político está associado à expectativa de apoio familiar? (2014)")
+```
+
+## O impacto da educação no interesse manifesto por política
+
+```{r}
+
+ggplot( 
+  data = polbr, 
+  mapping = aes(x = interestpol,
+                fill = educalevel)) +
+     geom_bar(alpha=.50) +
+ labs(x = "Interesse em Política",
+      title = "Distribuição da amostra, por interesse em política e nível educacional (2014)")
+```
+
+## E poderíamos continuar...
+
+com os gráficos. Mas nossa ideia de testar empiricamente afirmações está
+focada em descobrir indícios de haver ou não interesse/propensão
+diferenciada entre homens e mulheres para a atividade política:
+
+## Hipóteses
+
+*H0: Gênero não interfere no interesse por política*
+
+*H1: Indivíduos do gênero homem têm mais interesse em política do que as
+mulheres*
+
+## Em outras palavras...
+
+*H0*
+
+Prob(interesse alto \| mulher) = Prob(interesse alto \| homem)
+
+"A probabilidade de ter interesse alto, em se tratando de uma mulher, é
+igual à probabilidade de ter interesse alto, em se tratando de um
+homem".
+
+## e alternativamente...
+
+*H1*
+
+Prob(interesse alto \| mulher) != Prob(interesse alto \|homem)
+
+"A probabilidade de ter interesse alto, se for mulher, é diferente da
+probabilidade de ter interesse alto, se for homem".
+
+## Vamos ao teste
+
+```{r}
+
+##Especificando o formato da tabela de contingência, que contém as variáveis 'sex' e 'high_interest'
+
+tblmcnemartest <- xtabs(~ sex + high_interest, data = polbr)
+
+##Visualização da tabela
+
+print(tblmcnemartest)
+```
+
+## Resultado:
+
+```{r}
+##Aplicação do teste de McNemar
+
+mcnemar.test(tblmcnemartest)
+
+```
+
+## Resultado
+
+O teste retornou um p-valor \< 0,05, indicando portanto que há diferença
+significativa estatisticamente entre a probabilidade a ocorrência de
+interesse alto por política entre homens e mulheres. Em outras palavras,
+os dados indicam a possibilidade de rejeitar a hipótese nula, em favor
+da hipótese alternativa.
+
+## Poder explicativo
+
+```{r}
+
+cramer_v(tblmcnemartest)
+
+```
+
+Pela medida V de Cramer, calcula-se que cerca de 18% da variação do
+interesse político alto possa ser explicada pelo sexo dos indivíduos
+pesquisados.
+
+O teste, no entanto, é limitado no sentido de que só possibilita
+verificar a associação entre duas variáveis por vez, cada uma contendo
+duas categorias internas.
+
+## Conclusões
+
+As análises decorrentes não são conclusivas ainda, pois há o que
+aperfeiçoar nos modelos resultantes. No entanto, julgamos serem já
+resultados relevantes, por apontarem caminhos por onde conduzir a
+investigação.
+
+## Contatos
+
+> Para acessar agora o texto completo contendo as atividades da lista 05: <https://thcortez.github.io/listaetrabfinal/artigocompleto.html>
+
+*THIAGO CORTEZ COSTA*
+email: 
+Doutorando no Instituto de Ciência Política 
+Universidade de Brasília
